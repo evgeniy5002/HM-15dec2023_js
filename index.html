@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Получение прогноза погоды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <template id="weather-info-template">
+        <div class="day-forecast">
+            <div class="day-forecast_title">
+                <span><span>Погода:</span></span>
+            </div>
+
+            <div class="day-forecast_weather">
+                <div>{{weather.main}}</div>
+                <div>{{weather.description}}</div>
+            </div>
+
+            <div class="day-forecast_info">
+                <div>Температура: {{temp}}</div>
+                <div>Влажность: {{humidity}}</div>
+                <div>Ветер: {{windSpeed}}</div>
+                <div>Давление: {{pressure}}</div>
+                <div>Дата: {{dt_txt}}</div>
+            </div>
+        </div>
+    </template>
+
+    <main>
+        <div class="weather">
+            <div>
+                <label for="">Город: </label>
+                <input class="city-name" type="text">
+                <span class="tip">Введите название города что бы получить прогноз</span>
+            </div>
+
+            <div>
+                <div class="weather-forecast">
+                    Прогноз для:
+                </div>
+            </div>
+        </div>
+
+
+        <div class="weather-info">
+            <div class="weather-additionaly">
+                <span class="current-temperature">Текущая температура</span>
+                <span class="min-temperature">Минимальная температура</span>
+                <span class="max-temperature">Максимальная температура</span>
+                <span class="feels-temperature">Ощущается как</span>
+                <span class="sunrise">Восход</span>
+                <span class="sunset">Закат</span>
+                <span class="curent-time">Время</span>
+            </div>
+
+            <div class="weather-week-forecast">
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="./mustache.min.js"></script>
+</body>
+
+</html>
